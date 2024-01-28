@@ -20,14 +20,6 @@ button:hover {
   background-color: antiquewhite;
 }
 
-.input-area {
-  background-color: antiquewhite;
-  width: 400px;
-  height: 30px;
-  margin: 8px;
-  padding: 8px;
-  border-radius: 8px;
-}
 .incomplete-area {
   border: 2px solid antiquewhite;
   width: 400px;
