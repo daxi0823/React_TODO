@@ -48,7 +48,11 @@ export const Todo = () => {
 				todoText={todoText}
 				onChange={onChangeTodoText}
 				onClick={onClickAdd}
+				disabled={incompleteTodos.length >= 5}
 			/>
+			{incompleteTodos.length >= 5 && (
+				<p style={{ color : "red" }}>6個以上のタスクは無理だ</p>
+			)}
 			<IncompleteTodos 
 				todos={incompleteTodos}
 				onClickComplete={onClickComplete}
