@@ -1,19 +1,18 @@
 export const CompleteTodos = (props) => {
 	const { todos, onClickIncomplete } = props;
 	return (
-		<div className='complete-area'>
-		<p className='title'>完了のTODO</p>
-		<ul>
-			{todos.map((todo, index)=> (
+		<div className="complete-area">
+			<p className="title">完了のTODO</p>
+			<ul>
+				{todos.map((todo, index) => (
 					<li key={todo}>
-						<div className='list-row'>
-							<p className='todo-item'>{todo}</p>
+						<div className="list-row">
+							<p className="todo-item">{todo}</p>
 							<button onClick={() => onClickIncomplete(index)}>戻す</button>
 						</div>
 					</li>
-				)
-			)}
-		</ul>
-	</div>
-	)
-}
+				))}
+			</ul>
+		</div>
+	);
+};

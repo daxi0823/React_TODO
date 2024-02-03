@@ -1,9 +1,8 @@
-import { useState } from 'react';
-import './Todo.css';
-import { InputTodo } from './components/InputTodo';
-import { IncompleteTodos } from './components/IncompleteTodos';
-import { CompleteTodos } from './components/CompleteTodos';
-
+import { useState } from "react";
+import "./Todo.css";
+import { InputTodo } from "./components/InputTodo";
+import { IncompleteTodos } from "./components/IncompleteTodos";
+import { CompleteTodos } from "./components/CompleteTodos";
 
 export const Todo = () => {
 	const [todoText, setTodoText] = useState("");
@@ -50,10 +49,8 @@ export const Todo = () => {
 				onClick={onClickAdd}
 				disabled={incompleteTodos.length >= 5}
 			/>
-			{incompleteTodos.length >= 5 && (
-				<p style={{ color : "red" }}>6個以上のタスクは無理だ</p>
-			)}
-			<IncompleteTodos 
+			{incompleteTodos.length >= 5 && <p style={{ color: "red" }}>6個以上のタスクは無理だ</p>}
+			<IncompleteTodos
 				todos={incompleteTodos}
 				onClickComplete={onClickComplete}
 				onClickDelete={onClickDelete}
@@ -65,4 +62,4 @@ export const Todo = () => {
 			/>
 		</>
 	);
-}
+};
